@@ -541,5 +541,16 @@
             </snapshots>
         </repository>
     </repositories>
-
+		<distributionManagement>
+		<!-- SNAPSHOT组件发布到私服  mvn deploy-->
+		<snapshotRepository>
+			<id>snapshots</id>
+			<url>http://192.168.12.89:8081/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<!-- RELEASE组件发布到私服  mvn deploy-->
+		<repository>
+			<id>releases</id>
+			<url>http://192.168.12.89:8081/nexus/content/repositories/releases</url>
+		</repository>
+	</distributionManagement>
 </project>
